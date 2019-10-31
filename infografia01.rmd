@@ -4,7 +4,6 @@ bibliography:
 - 'zlibrary.bib'
 csl:
 - 'apa6.csl'
-output: pdf_document
 ---
 
 # Introducción
