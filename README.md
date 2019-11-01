@@ -17,7 +17,7 @@ Con estos datos, construimos nuestra medida de reducción del Gini debido a impu
 
     * [Descarga datos aquí](https://stats.oecd.org/Index.aspx?DataSetCode=SOCX_AGG)
 
-4. ELSOC. Estudio longitudinal social de Chile
+4. ELSOC. Estudio Longitudinal Social de Chile
 
     * [Descarga datos aquí: COES Data Repository](https://dataverse.harvard.edu/dataverse/coes_data_repository)
 
