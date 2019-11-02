@@ -8,7 +8,11 @@ author:
 - Jorge Atria $^\text{c,e}$
 - Francisco Meneses $^\text{b}$
 csl: apa6.csl
+css: "style.css" 
 bibliography: zlibrary.bib
+output:
+  html_document: 
+    theme: flatly
 ---
 
 --- 
