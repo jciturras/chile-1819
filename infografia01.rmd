@@ -1,5 +1,5 @@
 ---
-title: 'Meritocracia y redistribución en Chile: señales de la opinión pública'
+title: 'Meritocracia y redistribución en Chile: señales de la opinión pública.'
 date: '`r format(Sys.time(), "%d %B, %Y")`'
 author:
 - Luis Maldonado $^\text{a,d,}$[^1]

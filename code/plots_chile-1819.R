@@ -539,7 +539,7 @@ ppolicy2
 
 pol01<- grid.arrange(ppolicy1,ppolicy2, nrow = 1,
                      bottom=textGrob(label = "International Social Survey Programme - CEP Mayo 2019 (N=1244). Análisis incluyen ponderadores.", 
-                                     just = "left",hjust = -0.39,gp=gpar(fontsize=9,font=1)))
+                                     just = "left",hjust = -0.08,gp=gpar(fontsize=9,font=1)))
 
 ggsave(pol01,filename = "images/Figura8.png",device = "png",width = 30,height = 15,dpi = "retina",units = "cm")
 
