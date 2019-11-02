@@ -1,5 +1,7 @@
 
-# Plots: Meritocracy and Redistribution  ----------------------------------
+# Codigo para replicacion de Meritocracia y redistribucion en Chile: señales de la opinion pública.
+
+# Todos los analisis fueron hechos en Rstudio. Para fuentes, ver README.
 
 library(dplyr)
 library(ggplot2)
@@ -13,8 +15,6 @@ library(sjlabelled)
 library(questionr)
 rm(list=ls())
 options(OutDec = ",")
-setwd("C:/Users/JC/Dropbox/fondecyt regular 2015/Papers Proyecto/Infografía1019/chile-1819")
-
 
 # load data ---------------------------------------------------------------
 
@@ -142,7 +142,7 @@ redist01<- ggplot(redisGDP,aes(x=GDP,y=Redistribucion)) +
   geom_text(aes(y=Redistribucion+.8,label=Pais,color=group),size=4, vjust=0) +
   scale_x_continuous(breaks = seq(10000,90000,by=10000),limits=c(12000,93000)) + 
   geom_smooth(method="lm", se=FALSE, color="gray50") + 
-  labs(y="Reduccion del Gini debido a impuestos y transferencias",x="PIB per capita",
+  labs(y="Reducción del Gini debido a impuestos y transferencias",x="PIB per capita",
        caption = "Fuente: OCDE") +
   theme_bw() +
   theme(legend.position="none") +
@@ -236,7 +236,7 @@ ptdu1 <- ggplot(data = data.frame(merit=tdur1,var="tduro"  ,year=c(2016,2017,201
                 mapping = aes(x = factor(year),y = merit, label=paste(round(merit*100,2),"%"))) +
   geom_bar(stat = "identity") +
   geom_label() +
-  labs(title = "El Trabajo duro es importante para salir surgir en la vida.")+
+  labs(title = "El Trabajo duro es importante para surgir en la vida.")+
   ylab(label = "Nivel de acuerdo")+
   xlab(label = NULL)+
   scale_y_continuous(limits=c(0,1),labels = scales::percent_format(accuracy = 1))+
@@ -250,7 +250,7 @@ ptdu1 <- ggplot(data = data.frame(merit=tdur1,var="tduro"  ,year=c(2016,2017,201
 ptdu1
 
 barplot1<- grid.arrange(ptdu1,pef1, nrow = 1,
-                        bottom=textGrob(label = "Estudio Social Longitudinal de Chile (n=2094). Análisis incluyen ponderadores", 
+                        bottom=textGrob(label = "Estudio Social Longitudinal de Chile (n=2094). Análisis incluyen ponderadores.", 
                                         just = "left",hjust = -0.39,
                                         gp=gpar(fontsize=9,font=1)))
 
@@ -288,7 +288,7 @@ g3=ggplot(wvs) +
         axis.title.y = element_text(size=14, face="bold"),
         plot.title=element_text(hjust=0.5,size = 11,face = "plain")) + 
   guides(colour=F)+
-  labs(caption = "Fuente:  World Value Survey (1990/2019)")
+  labs(caption = "Fuente:  World Value Survey 1990/2019.")
 g3
 
 # ISSP junio 2019: 4B
@@ -316,7 +316,7 @@ g4=ggplot(data=bar,aes(x=reorder(dose,-per),y=per,label=paste(round(per*100,2),"
         axis.text=element_text(size=10),
         axis.title.y = element_text(size=14, face="bold"),
         plot.title=element_text(hjust=0.5,size = 11,face = "plain"))+
-  labs(caption = "Fuente: International Social Survey Programme - CEP 2019")
+  labs(caption = "Fuente: ISSP - CEP 2019 (n=1343). Análisis incluyen ponderadores.")
 
 g4
 # Graficos juntos:  1000 de width y 400 de height
@@ -394,7 +394,7 @@ g6=ggplot(my_data1, aes(x=reorder(Country,Redistribution),y=Redistribution)) +
         plot.title=element_text(hjust=0,size = 12,face = "italic")) +
   labs(caption = "Fuente:  Latin American Public Opinion Project (2016/2017)")
 g6
-# Graficos juntos:  1000 de width y 400 de height
+
 pref1 <- grid.arrange(g5,g6,ncol=2)	   
 
 ggsave(pref1,filename = "images/Figura5.png",device = "png",width = 50,height = 25,dpi = "retina",units = "cm")
@@ -442,7 +442,7 @@ gov1<- plot_likert(cl16[,c("gsalud","geduc","gpension","gunemp")],cat.neutral = 
                    show.n = F,reverse.scale = FALSE,weight.by = cl16$WEIGHT) +
   labs(title ="Areas de gasto del gobierno. Dígame si a Ud. le gustaría que se gastara más o menos en cada una de ellas.",
        subtitle = "'Mucho más', podría ser necesario aumentar los impuestos.", 
-       caption = "International Social Survey Programme - Role of Goverment 2016 (n=1349). Análisis incluyen ponderadores ")+ theme_classic()+
+       caption = "International Social Survey Programme - Role of Goverment 2016 (n=1349). Análisis incluyen ponderadores.")+ theme_classic()+
   theme(axis.text=element_text(size=12, face="bold"),
         axis.title=element_text(size=14,face="bold"),
         plot.title=element_text(hjust=0.5,size = 14,face = "bold"),
@@ -486,7 +486,7 @@ state1<- plot_likert(select(col19,"masalary","gersalary"),cat.neutral = 3,show.n
         plot.title=element_text(hjust=0.5,size = 14,face = "bold"),
         legend.position = "bottom",
         plot.subtitle = element_text(hjust=0,size = 12,face = "italic")) +
-  labs(caption = paste(fuente2,"(n=1244).","Análisis incluyen ponderadores"),title = "Rol Estado en la acumulación de riqueza") +
+  labs(caption = paste(fuente2,"(n=1244).","Análisis incluyen ponderadores."),title = "Rol Estado en la acumulación de riqueza") +
   scale_fill_brewer(labels = c("Gastar lo mismo","Gastar Menos","Gastar más" ),breaks=c("neutral",2,1))
 state1
 
@@ -538,7 +538,7 @@ ppolicy2<- ggplot(data =as.data.frame(prop.table(wtd.table(cl16c$ppubmeb,weights
 ppolicy2
 
 pol01<- grid.arrange(ppolicy1,ppolicy2, nrow = 1,
-                     bottom=textGrob(label = "International Social Survey Programme - CEP Mayo 2019 (N=1244). Análisis incluyen ponderadores ", 
+                     bottom=textGrob(label = "International Social Survey Programme - CEP Mayo 2019 (N=1244). Análisis incluyen ponderadores.", 
                                      just = "left",hjust = -0.39,gp=gpar(fontsize=9,font=1)))
 
 ggsave(pol01,filename = "images/Figura8.png",device = "png",width = 30,height = 15,dpi = "retina",units = "cm")
@@ -554,7 +554,7 @@ union2<- plot_likert(col19[,c("sind","repres")],cat.neutral = 3,show.n = FALSE,v
         plot.title=element_text(hjust=0.5,size = 14,face = "bold"),
         legend.position = "bottom",
         plot.subtitle = element_text(hjust=0,size = 12,face = "italic")) +
-  labs(caption = paste(fuente2,"(n=1244)","Análisis incluyen ponderadores"),title = "Rol de los sindicatos en la acumulación de riqueza") +
+  labs(caption = paste(fuente2,"(n=1244)","Análisis incluyen ponderadores."),title = "Rol de los sindicatos en la acumulación de riqueza") +
   scale_fill_brewer(labels = c("Gastar lo mismo","Gastar Menos","Gastar más" ),breaks=c("neutral",2,1))
 union2
 
