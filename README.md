@@ -27,3 +27,7 @@ Con estos datos, construimos nuestra medida de reducción del Gini debido a impu
 
 6. International Social Survey Programme, módulo de desigualdad 2019.
     * [Descarga datos aquí: ISSP - CEP 83, Mayo 2019](https://www.cepchile.cl/cep/site/edic/base/port/encuestasCEP.html)
+
+# Citar
+
+Proyecto en [Open Science Framework](https://osf.io/g4ek8/) 
