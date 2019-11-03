@@ -487,7 +487,7 @@ state1<- plot_likert(select(col19,"masalary","gersalary"),cat.neutral = 3,show.n
         legend.position = "bottom",
         plot.subtitle = element_text(hjust=0,size = 12,face = "italic")) +
   labs(caption = paste(fuente2,"(n=1244).","Análisis incluyen ponderadores."),title = "Rol Estado en la acumulación de riqueza") +
-  scale_fill_brewer(labels = c("Gastar lo mismo","Gastar Menos","Gastar más" ),breaks=c("neutral",2,1))
+  scale_fill_brewer(labels = c("Ni de acuerdo ni en desacuerdo","En Desacuerdo","De acuerdo" ),breaks=c("neutral",2,1))
 state1
 
 ggsave(state1,filename = "images/Figura7.png",device = "png",width = 30,height = 15,dpi = "retina",units = "cm")
@@ -555,7 +555,7 @@ union2<- plot_likert(col19[,c("sind","repres")],cat.neutral = 3,show.n = FALSE,v
         legend.position = "bottom",
         plot.subtitle = element_text(hjust=0,size = 12,face = "italic")) +
   labs(caption = paste(fuente2,"(n=1244)","Análisis incluyen ponderadores."),title = "Rol de los sindicatos en la acumulación de riqueza") +
-  scale_fill_brewer(labels = c("Gastar lo mismo","Gastar Menos","Gastar más" ),breaks=c("neutral",2,1))
+  scale_fill_brewer(labels = c("Ni de acuerdo ni en desacuerdo","En Desacuerdo","De acuerdo" ),breaks=c("neutral",2,1))
 union2
 
 ggsave(union2,filename = "images/Figura9.png",device = "png",width = 30,height = 15,dpi = "retina",units = "cm")
