@@ -1,24 +1,24 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1572790479150.000,
+    "created" : 1572791007316.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "40CB2FC9",
+    "id" : "60F44ABC",
     "lastKnownWriteTime" : 1572790508,
-    "last_content_update" : 1572790508183,
+    "last_content_update" : 1572790508,
     "path" : "C:/Users/JC/Dropbox/fondecyt regular 2015/Papers Proyecto/Infografía1019/chile-1819/infografia01.rmd",
     "project_path" : "infografia01.rmd",
     "properties" : {
-        "cursorPosition" : "93,790",
-        "scrollLine" : "94"
+        "cursorPosition" : "105,35",
+        "scrollLine" : "93"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 2,
+    "relative_order" : 1,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_markdown"
