@@ -95,7 +95,7 @@ Un segundo mecanismo de integración social refiere al fortalecimiento de actore
 
 ### Materiales suplementarios
 
-Material para la replicación de los análisis realizados para la presente investigación se pueden encontrar en nuestro **[repositorio](https://github.com/jciturras/chile-1819)** y en **[Open Science Framework](https://osf.io/g4ek8/)**
+Material para la replicación de los análisis realizados para la presente investigación se pueden encontrar en nuestro **[repositorio](https://github.com/jciturras/chile-1819)** y en **[Open Science Framework](https://osf.io/g4ek8/)**.
 
 ### Declaraciones de los autores
 
