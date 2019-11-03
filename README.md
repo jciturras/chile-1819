@@ -31,3 +31,6 @@ Con estos datos, construimos nuestra medida de reducción del Gini debido a impu
 # Citar
 
 Proyecto en [Open Science Framework](https://osf.io/g4ek8/) 
+
+> Maldonado, L., Castillo, J. C., Iturra, J. C., Atria, J., & Meneses, F. (2019, November 3). Meritocracia y redistribución en Chile: señales de la opinión pública. https://doi.org/10.17605/OSF.IO/G4EK8
+
