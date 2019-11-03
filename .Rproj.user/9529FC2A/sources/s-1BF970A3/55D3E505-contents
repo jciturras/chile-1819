@@ -1,0 +1,26 @@
+name: "metcuanti2019"
+output_dir: "." # Esto es para que se compile en el rootdir  
+navbar:
+  title: "Métodos Cuantitativos De Investigación En Educación - EDU4202"
+  right:
+    - text: "Inicio"
+      icon: fa-home
+      href: index.html
+    - text: "Talleres"
+      icon: fa-desktop
+      href: talleres.html  
+    - text: Tutoriales
+      icon: ion-social-markdown   
+      menu:
+          - text: "Reporte"
+          - text: "R Markdown" 
+            href: tutoria-rmarkdown-html.html
+          - text: "Análisis"  
+          - text: "Librerías R"  
+            href: instalar-paquetes.html  
+output:
+  html_document:
+    css: style.css
+      
+      
+ 

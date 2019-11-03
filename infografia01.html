@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Luis Maldonado ^\text{a,d,}" />
+<meta name="author" content="Juan Carlos Castillo ^\text{b,e,1}" />
+<meta name="author" content="Julio Iturra ^\text{a,e,1}" />
+<meta name="author" content="Jorge Atria ^\text{c,e}" />
+<meta name="author" content="Francisco Meneses ^\text{b}" />
+
+
+<title>Meritocracia y redistribución en Chile: señales de la opinión pública.</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Meritocracia y redistribución en Chile: señales de la opinión pública.</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="infografia01.html">
+    <span class="fa fa-book-open"></span>
+     
+    Nota
+  </a>
+</li>
+<li>
+  <a href="talleres.html">
+    <span class="fa fa-github fa-lg"></span>
+     
+    
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Meritocracia y redistribución en Chile: señales de la opinión pública.</h1>
+<h4 class="author">Luis Maldonado <span class="math inline">\(^\text{a,d,}\)</span><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></h4>
+<h4 class="author">Juan Carlos Castillo <span class="math inline">\(^\text{b,e,1}\)</span></h4>
+<h4 class="author">Julio Iturra <span class="math inline">\(^\text{a,e,1}\)</span></h4>
+<h4 class="author">Jorge Atria <span class="math inline">\(^\text{c,e}\)</span></h4>
+<h4 class="author">Francisco Meneses <span class="math inline">\(^\text{b}\)</span></h4>
+<h4 class="date">03 noviembre, 2019</h4>
+
+</div>
+
+
+<hr />
+<p><span class="math inline">\(^\text{a}\)</span> Instituto de Sociología, Pontificia Universidad Católica de Chile, Chile. <br> <span class="math inline">\(^\text{b}\)</span> Departamento de Sociología, Universidad de Chile, Chile. <br> <span class="math inline">\(^\text{c}\)</span> Escuela de Sociología, Universidad Diego Portales, Santiago, Chile.<br> <span class="math inline">\(^\text{d}\)</span> Centro de Investigación para la Gestión Integrada del Riesgo de Desastres (CIGIDEN), Santiago, Chile.<br> <span class="math inline">\(^\text{e}\)</span> Centro de Estudios de Conflicto y Cohesión social (COES), Chile.</p>
+<div id="introduccion" class="section level1">
+<h1>Introducción</h1>
+<p>La opinión pública y las preferencias redistributivas de los ciudadanos han ganado una renovada atención en el estudio de reformas institucionales. Ellas aparecen como un termométro social que indica la temperatura de la sociedad respecto de la temática de la desigualdad y la demanda ciudadana por bienestar <span class="citation">(Soroka &amp; Wlezien, 2009)</span>. Junto a ello, la opinión pública también juega el rol de un actor que puede tanto promover como bloquear cambios a las reglas del juego en una sociedad <span class="citation">(Jensen &amp; Naumann, 2016; Pierson, 1996 )</span>.</p>
+<p>Junto a las preferencias redistributivas, otro ámbito de estudio relacionado con las actitudes hacia la desigualdad es el de la meritocracia. El concepto de meritocracia se utiliza para caracterizar contextos en los cuales los beneficios y recompensas se distribuyen de acuerdo a esfuerzo y talento individual <span class="citation">(Young, 1961)</span>. Esta idea ha sido asociada a procesos de legitimación de desigualdad, ya que en sociedades modernas las diferencias de estatus encontrarían (al menos en parte) justificación en los méritos individuales <span class="citation">(Hadjar, 2008)</span>.</p>
+<p>El objetivo del presente texto es documentar la evolución reciente de las preferencias redistributivas de la ciudadanía en Chile. Junto a ello, también presentamos evidencia sobre actitudes respecto de la meritocracia, en tanto principio legitimador de diferencias en las sociedades actuales. Para ello, analizamos datos agregados y encuestas de opinión pública que representan la información de mejor calidad existentes en el país en términos de representatividad de la población y comparación internacional. Los análisis que presentamos pretenden aportar elementos para la discusión sobre las demandas sociales en el Chile actual desde el punto de vista de la opinión pública. Además, discutimos algunas señales de la opinión pública que indican algunos caminos que podrían servir para satisfacer la demanda por redistribución en la ciudadanía.</p>
+</div>
+<div id="evolucion-de-la-desigualdad-y-el-gasto-publico" class="section level1">
+<h1>Evolución de la desigualdad y el gasto público</h1>
+<p>Dos características del contexto institucional chileno describen el marco estructural bajo el cual han evolucionado las preferencias de los ciudadanos en los últimos años. Una de ellas es el desarrollo de la desigualdad económica. En comparación con los países que forman la Organización para la Cooperación y el Desarrollo Económicos, la evidencia internacional muestra que la distribución del ingreso de Chile es una de las más desiguales <span class="citation">(OECD, 2018)</span>. Ahora bien, desde nuestro punto de vista la tendencia clave para entender la evolución de las preferencias de los votantes en el país no refiere tanto a la comparación internacional como a la evolución de la desigualdad económica en el pasado reciente. La evidencia indica que la desigualdad del ingreso se ha mantenido casi constante. Tal como se ve en el panel de la izquierda de la figura 1, el coeficiente Gini ha tenido leves variaciones en los últimos años, desde 48 en 2009 a 46 en el 2017. Series de tiempo más extensas muestran que, pese a cambios en las últimas décadas, la desigualdad del ingreso en el país sigue siendo muy alta <span class="citation">(PNUD, 2017)</span>.</p>
+<div class="figure">
+<img src="images/Figura1.png" alt="" />
+<p class="caption"><strong>Figura 1:</strong> Desigualdad del ingreso y Gasto social del Estado en Chile, 2009-2017</p>
+</div>
+<p>Una segunda característica estructural es la intervención del Estado para disminuir la desigualdad económica en términos de impuestos, servicios públicos y transferencias. La evidencia para Chile indica que dicha intervención es de magnitud limitada. Para ilustrar, el panel de la derecha de la figura 1 muestra la evolución del gasto público en políticas sociales —medido como porcentaje del PIB—para el periodo 2010-2017. Los resultados indican estabilidad: el gasto aumentó de 10,4% en 2010 a 10,9% en 2017. La figura 2 complementa estas tendencias con información sobre redistribución del ingreso según nivel de desarrollo económico de países miembros de la OCDE (medido con PIB per cápita). El indicador de redistribución mide la reducción en términos porcentuales del coeficiente Gini que se debe a transferencias e impuestos. La mayoría de la información es para el 2016, aunque hay algunos países con información del 2017. El tamaño de las burbujas en el gráfico captura la mágnitud de la redistribución (burbujas más grandes indican mayor reducción de la desigualdad de ingreso) y la línea horizontal resume el nivel de redistribución de cada país que se puede predecir según el PIB de estos. Como se puede notar, Chile presenta el nivel de redistribución más bajo de la muestra de países OCDE analizada. Ahora bien, más interesante es el hecho de que hay países con PIBs per cápitas similares al de Chile pero cuya magnitud de reducción de la desigualdad es claramente mayor (Rusia, Latvia, Lituania, Costa Rica).</p>
+<div class="figure">
+<img src="images/Figura2.png" alt="" />
+<p class="caption"><strong>Figura 2:</strong> Reducción de la desigualdad de ingreso según PIB per cápita, 2016/2017</p>
+</div>
+<p>Tanto los niveles de desigualdad como el esfuerzo del Estado para intervenir en ella conforman un marco institucional que moldea las preferencias de los ciudadanos. En un contexto en donde los niveles desigualdad y de intervención estatal han experimentado cambios limitados, ¿cómo perciben los ciudadanos las oportunidades que hay en la sociedad para salir adelante en la vida? ¿son consistentes estas percepciones con la demanda por redistribución? En el siguiente sección, describimos la evolución de ambos tipos de actitudes en el Chile contemporáneo.</p>
+</div>
+<div id="evolucion-de-las-preferencias-redistributivas-y-percepciones-sobre-la-meritocracia" class="section level1">
+<h1>Evolución de las preferencias redistributivas y percepciones sobre la meritocracia</h1>
+<p>Las oportunidades que las personas perciben para salir adelante en la vida son un importante determinante de las preferencias redistributivas <span class="citation">(McCall, 2013)</span>. Dentro de la percepción de oportunidades, destaca la idea de mérito, entendido como la combinación de esfuerzo y habilidades individuales. Este constituye la base del ‘ideal meritocrático’, es decir, la creencia de que las personas obtienen lo que merecen en la medida que han trabajado duro por ello. La noción de meritocracia es una ideología que puede ser usada para justificar el modo como una sociedad debe asignar los recursos económicos.</p>
+<div class="figure">
+<img src="images/Figura3.png" alt="" />
+<p class="caption"><strong>Figura 3:</strong> Apoyo a la meritocracia y percepción de recompensas en Chile, 2016-2018</p>
+</div>
+<p>Utilizando la base de datos del Estudio Social Longitudinal de Chile (ELSOC), analizamos la evolución de las percepciones sobre meritocracia en Chile entre 2016 y 2018. Nos centramos en la percepción de las personas sobre la importancia del trabajo duro para surgir en la vida, y nuestros resultados agrupan las categorías “Bastante Importante” y “Muy Importante” para mostrar el nivel de acuerdo con dicho factor. Así, mientras mayor la relevancia de éste, mayor sería la adhesión al ideal meritocrático. Como muestra el lado izquierdo de la figura 3, los resultados resaltan que, si bien existe una leve disminución desde 2016, aproximádamente un 75% de los encuestados está de acuerdo con que el trabajo duro es un medio esencial para el progreso vital.</p>
+<p>También quisimos indagar si ese ideal meritocrático se traduce efectivamente en recompensas sociales. Para esto, analizamos el nivel de acuerdo con la afirmación “En Chile las personas son recompensadas por sus esfuerzos”. Al igual que en el caso anterior, por un lado agrupamos las respuestas “De Acuerdo” y “Totalmente de acuerdo”, y por otro “En desacuerdo” y “Totalmente en desacuerdo. El gráfico a la derecha de la figura 3 muestra el nivel de acuerdo con la afirmación en cuestión.</p>
+<p>En una sociedad meritocrática, esperaríamos que el apoyo a la meritocracia y la percepción de recompensas sean consistentes; es decir, que las personas crean en el valor del trabajo y que la sociedad efectivamente los recompense por ello. Sin embargo, en Chile mientras la mayoría de los encuestados apoya el ideal meritocrático, solo una minoría (26%) siente que son recompensados por ello (lado derecho de figura 3).</p>
+<p>En países donde más se apoya el esfuerzo y el mérito personal para salir adelante en la vida existe en general un menor apoyo a la redistribución <span class="citation">(Alesina &amp; La Ferrara, 2005; Bénabou &amp; Tirole, 2006)</span>. Para Chile esperaríamos, entonces, una baja preferencia por redistribución, dada la relevancia de la meritocracia. Para evaluar esto, analizamos la valoración del igualitarismo en Chile (si se considera al bienestar como derecho social y si se apoyan políticas para esto, particularmente reducir diferencias de ingreso entre ricos y pobres) <span class="citation">(Feldman &amp; Steenbergen, 2001)</span> . Si bien igualitarismo y demanda por redistribución no son exactamente lo mismo, en general están altamente correlacionados <span class="citation">(Azar et al., 2018)</span>.</p>
+<div class="figure">
+<img src="images/Figura4.png" alt="" />
+<p class="caption"><strong>Figura 4:</strong> Evolución de las preferencias redistributivas en Chile, 1990-2019</p>
+</div>
+<p>El lado izquierdo de la figura 4 muestra el nivel de apoyo igualitarista y su cambio en las últimas décadas. Para ello, utilizamos un ítem de la encuesta mundial de valores con una escala de respuesta de 1 a 10, en donde 1 es “Debería haber mayor igualdad de ingresos” y 10 es “Debería haber mayor diferencia de ingreso como incentivo al esfuerzo individual” para el periodo 1990-2012. La figura 4 muestra el porcentaje de personas que señalan las opciones 1, 2 o 3, las que representan un fuerte nivel de igualitarismo. Como podemos notar, hay un aumento drástico hacia una preferencia por mayor igualdad, pasando de un 26% en 1990 a 60% en 2012. El lado derecho de la misma figura presenta datos de la encuesta CEP de junio 2019. Repitiendo la reagrupación de categorías de figuras anteriores, se confirma una muy alta preferencia a favor de la redistribución entre la población: casi un 74% de los encuestados señala que está de acuerdo con que es responsabilidad del Estado reducir las diferencias entre ricos y pobres.</p>
+<div class="figure">
+<img src="images/Figura5.png" alt="" />
+<p class="caption"><strong>Figura 5:</strong> Preferencias redistributivas en países de ingreso medio, OECD y América Latina</p>
+</div>
+<p>También comparamos con otros países, especialmente con aquellos con desigualdad económica similar a Chile. Usando datos del International Social Survey Programme (ISSP) para 2016, el lado izquierdo de la figura 5 nos muestra que en Chile casi el 70% de los encuestados señala “Sí, sin ninguna duda” ante la pregunta de si es responsabilidad del gobierno reducir las diferencias de ingreso entre ricos y pobres, ubicándose como uno de los países con mayor demanda por redistribución entre naciones de ingreso medio y economías desarrolladas de la OECD incluidas en el ISSP. Al comparar con América Latina, y utilizando información sobre preferencias redistributivas del Latin American Public Opinion Project (LAPOP) para varios países de América Latina en el 2016/2017, encontramos ideas similares. Como se aprecia en el lado derecho de la figura 5, y frente a una afirmación similar a la anterior (“El Estado [país] debe implementar políticas firmes para reducir la desigualdad de ingresos entre ricos y pobres. ¿Hasta qué punto está de acuerdo o en desacuerdo con esta frase)?”, con valores entre 1 y 7, donde 1 representa “muy en desacuerdo” y 7 representa “muy de acuerdo”), el gráfico presenta un significativo porcentaje de encuestados que señalan valores de 6 ó 7. Con esto, la propuesta de una mayor redistribución no sólo se erige como una de las más altas en la OECD, sino también en América Latina.</p>
+</div>
+<div id="como-responder-a-la-demanda-por-redistribucion-senales-desde-la-opinion-publica" class="section level1">
+<h1>¿Cómo responder a la demanda por redistribución? Señales desde la opinión pública</h1>
+<p>En el contexto chileno, ¿qué señales ha enviado la opinión pública que puedan ser de utilidad para responder a la demanda por redistribución en el país? Sobre la base de los recientes módulos del ISSP sobre gobierno (año 2016) y desigualdad (año 2019) nos referimos a dos áreas de relevancia.</p>
+<div class="figure">
+<img src="images/Figura6.png" alt="" />
+<p class="caption"><strong>Figura 6:</strong> Apoyo al gasto público en Chile, 2016</p>
+</div>
+<p>La primera se relaciona con gasto público e intervención estatal. En la encuesta ISSP del 2016, se les preguntó a las personas si les gustaría que se gastara más o menos para áreas específicas de las políticas sociales, tales como educación y salud. La figura 6 muestra los resultados para cuatro áreas de la política social, que representan ámbitos clásicos en donde ha intervenido el Estado de bienestar. Como queda en evidencia, la demanda por un mayor gasto en estas áreas es claramente predominante en la población: más del 70% de los encuestados señala gastar más o gastar mucho más en las cuatro áreas. En salud y pensiones, el nivel de apoyo es del 91,1%. Junto a este patrón, quisiéramos destacar que las preguntas que estamos analizando también le señalan al encuestado que “Recuerde que si Ud. dice “mucho más”, podría ser necesario aumentar los impuestos”. Los resultados sugieren, entonces, que una porción significativa de la población no solo quiere un aumento del gasto público en transferencias y servicios, sino que está dispuesta a aceptar mayores impuestos por ello.</p>
+<div class="figure">
+<img src="images/Figura7.png" alt="" />
+<p class="caption"><strong>Figura 7:</strong> Apoyo a áreas alternativas de intervención estatal en Chile, 2019</p>
+</div>
+<p>La encuesta CEP de junio de 2019 también refiere a formas adicionales de intervención social. Se les pidió a los entrevistados señalar su nivel de acuerdo con una serie de áreas de intervención. La figura 7 presenta el porcentaje de los entrevistados que señala estar de acuerdo (“Muy de acuerdo” más “De acuerdo”) con dos áreas para los cuales hay un amplio consenso en la población. Los resultados indican que el 81% de los entrevistados está de acuerdo con un mecanismo estatal que asegure que los salarios bajos aumenten con el crecimiento económico. Del mismo modo, y consistente con la amplia adhesión al igualitarismo, el 71,7% apoya que el Estado limite el salario de los gerentes de grandes empresas.</p>
+<div class="figure">
+<img src="images/Figura8.png" alt="" />
+<p class="caption"><strong>Figura 8:</strong> Señales de la opinión pública sobre representatividad de las políticas públicas en Chile, 2019</p>
+</div>
+<p>La segunda área de relevancia remite a la generación de mecanismos de integración social que sean vistos como legítimos por la ciudadanía. Chile está viviendo una de sus mayores crisis institucionales desde el retorno a la democracia, la cual está atravesada por una fractura del acceso al poder político <span class="citation">(Somma, 2019)</span>. La clase política chilena se ha desconectado de la ciudadanía expresada en movimientos sociales y la sociedad civil organizada. Esto también puede afectar las políticas sociales. Si bien algunas políticas sociales benefician a una porción significativa de la ciudadanía, ésta puede sentir que las políticas no los representan porque no han participado de su generación. Al analizar la encuesta CEP de junio del 2019 encontramos que esta idea tiene asidero. Como se observa en la figura 8, solo el 20,9% de los encuestados está de acuerdo con que las políticas públicas reflejan los intereses de la mayoría. Frente a la pregunta “¿Cuán diferentes cree usted serían las políticas públicas si los miembros del Congreso fueran más parecidos a los demás ciudadanos en términos de riqueza?”, casi el 70% señala que éstas serían “Diferentes” o “Muy diferentes”. Estos hallazgos sugieren que la ciudadanía está a favor de una mayor igualdad económica entre los que legislan y los ciudadanos. Asimismo, esto revela que no solo sería importante entregar beneficios por parte del Estado, sino también hacer partícipes a los beneficiarios del proceso en el que se generó la política social en cuestión. De este modo, la política social es pensada como un problema de toda la comunidad, y así se podría evitar generar diferencias sociales—por ejemplo, entre los “necesitados” y el resto de los ciudadanos; o entre los ciudadanos y la elite—que puedan socavar la legitimidad del contrato social. La lógica moral de la política social, entonces, no descanza sobre la pregunta “¿cómo deberíamos nosotros resolver SUS problemas?”, sino en “¿cómo deberíamos nosotros resolver NUESTROS problemas de bienestar social”?. Este tipo de inclusiones pueden servir como un efectivo mecanismo de integración social.</p>
+<div class="figure">
+<img src="images/Figura9.png" alt="" />
+<p class="caption"><strong>Figura 9:</strong> Señales de la opinión pública sobre la colectivización de los intereses en Chile, 2019</p>
+</div>
+<p>Un segundo mecanismo de integración social refiere al fortalecimiento de actores que intermedien entre los individuos y el Estado y el sistema político. Estos actores pueden canalizar institucionalmente las demandas de la ciudadanía, de modo de evitar crisis institucionales de gran magnitud. Un posible actor de este tipo son los trabajadores. Ellos fueron claves para el desarrollo de los Estados de bienestar en siglo XX. Sin embargo, los trabajadores han tenido un rol menor en el juego de poder en el Chile contemporáneo. Pese a esto, los datos de la encuesta CEP de junio del 2019 señalan que hay una gran demanda ciudadana por mayor colectivización de los intereses. Tal como muestra la figura 9, más del 70% de los encuestados está de acuerdo con la necesidad de sindicatos fuertes y con tener representación en directorios de grandes empresas. Ciertamente, los trabajadores fueron claves en el siglo XX y las condiciones sociales del siglo XXI son distintas, por lo que resulta importante mencionar también otros tipos de actores colectivos—como los movimientos sociales y la sociedad civil organizada. Más allá de señalar una opción específica, quisiéramos mostrar la demanda que hay en la ciudadanía por mecanismos de integración social que colectivicen los intereses de los individuos.</p>
+<div id="materiales-suplementarios" class="section level3">
+<h3>Materiales suplementarios</h3>
+<p>Material para la replicación de los análisis realizados para la presente investigación se pueden encontrar en nuestro <strong><a href="https://github.com/jciturras/chile-1819">repositorio</a></strong>.</p>
+</div>
+<div id="declaraciones-de-los-autores" class="section level3">
+<h3>Declaraciones de los autores</h3>
+<p>Luis Maldonado y Julio Iturra aportaron equitativamente en el proceso de redacción y análisis de datos. Juan Carlos Castillo y Jorge Atria aportaron con la edición y escritura del manustrito. Francisco Meneses aportó con ediciones generales.</p>
+</div>
+<div id="financiamiento" class="section level3">
+<h3>Financiamiento</h3>
+<p>Este trabajo fue realizado a través del financiamiento de CONICYT/FONDECYT REGULAR/1160921. Así también con el apoyo de CONICYT/FONDAP/15130009.</p>
+</div>
+</div>
+<div id="referencias" class="section level1 unnumbered">
+<h1>Referencias</h1>
+<div id="refs" class="references">
+<div id="ref-Alesina2005">
+<p>Alesina, A., &amp; La Ferrara, E. (2005). Preferences for redistribution in the land of opportunities. <em>Journal of Public Economics</em>, <em>89</em>(5-6), 897–931. <a href="https://doi.org/10.1016/j.jpubeco.2004.05.009">https://doi.org/10.1016/j.jpubeco.2004.05.009</a></p>
+</div>
+<div id="ref-Azaretal2018">
+<p>Azar, A., Maldonado, L., Castillo, J. C., &amp; Atria, J. (2018). Income, egalitarianism and attitudes towards healthcare policy: A study on public attitudes in 29 countries. <em>Public Health</em>, <em>154</em>, 59–69. <a href="https://doi.org/10.1016/j.puhe.2017.09.007">https://doi.org/10.1016/j.puhe.2017.09.007</a></p>
+</div>
+<div id="ref-Benabou2006">
+<p>Bénabou, R., &amp; Tirole, J. (2006). Belief in a Just World and Redistributive Politics. <em>The Quarterly Journal of Economics</em>, <em>121</em>(2), 699–746. <a href="https://doi.org/10.1162/qjec.2006.121.2.699">https://doi.org/10.1162/qjec.2006.121.2.699</a></p>
+</div>
+<div id="ref-Feldman2001">
+<p>Feldman, S., &amp; Steenbergen, M. R. (2001). The Humanitarian Foundation of Public Support for Social Welfare The Humanitarian Foundation of Public Support for Social Welfare. <em>American Journal of Political Science</em>, <em>45</em>(3), 658–677.</p>
+</div>
+<div id="ref-Hadjar2008meritokratie">
+<p>Hadjar, A. (2008). Meritokratie als legitimationsprinzip. <em>Die Entwicklung Der Akzeptanz Sozialer Ungleichheit Im Zuge Der Bildungsexpansion. Wiesbaden</em>.</p>
+</div>
+<div id="ref-Jensen&amp;Nauman2016">
+<p>Jensen, C., &amp; Naumann, E. (2016). Increasing pressures and support for public healthcare in Europe. <em>Health Policy</em>, <em>120</em>(6), 698–705. <a href="https://doi.org/10.1016/j.healthpol.2016.04.015">https://doi.org/10.1016/j.healthpol.2016.04.015</a></p>
+</div>
+<div id="ref-McCall2013">
+<p>McCall, L. (2013). <em>The Undeserving Rich: American Beliefs about Inequality, Opportunity, and Redistribution</em>. Cambridge: Cambridge University Press.</p>
+</div>
+<div id="ref-OECD2018">
+<p>OECD. (2018). <em>A Broken Social Elevator? How to Promote Social Mobility</em>. Paris: OECD. <a href="https://doi.org/https://doi.org/https://doi.org/10.1787/9789264301085-en">https://doi.org/https://doi.org/https://doi.org/10.1787/9789264301085-en</a></p>
+</div>
+<div id="ref-Pierson1996new">
+<p>Pierson, P. (1996). The new politics of the welfare state. <em>World Politics</em>, <em>48</em>(2), 143–179.</p>
+</div>
+<div id="ref-Desiguales2017">
+<p>PNUD. (2017). <em>Desiguales. Orígenes, cambios y desafíos de la brecha social en Chile.</em> Santiago de Chile: Programa de las Naciones Unidas para el Desarrollo.</p>
+</div>
+<div id="ref-Somma2019fractura">
+<p>Somma, N. (2019). Chile: Una sociedad híper-fracturada. <em>Centro de Estudios Sociopolíticos</em>.</p>
+</div>
+<div id="ref-Soroka2009">
+<p>Soroka, S. N., &amp; Wlezien, C. (2009). <em>Degrees of Democracy: Politics, Public Opinion, and Policy</em>. Cambridge: Cambridge University Press.</p>
+</div>
+<div id="ref-Young1961">
+<p>Young, M. (1961). <em>The Rise of the Meritocracy: An Essay on Education and Equality</em>. (P. Books, Ed.). Thames and Hudson.</p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Autores correspondientes. E-mail address: <a href="lmaldona@uc.cl">lmaldona@uc.cl</a>, <a href="juancastillov@uchile.cl">juancastillov@uchile.cl</a> y <a href="jciturra@uc.cl">jciturra@uc.cl</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
