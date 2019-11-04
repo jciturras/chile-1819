@@ -2,7 +2,7 @@
 title: 'Meritocracia y Redistribución en Chile: Señales de la Opinión Pública.'
 # date: "`r format(Sys.time(), "%d %B, %Y")`"
 author:
-- Luis Maldonado $^\text{a,d,}$[^1]
+- Luis Maldonado, [lmaldona@uc.cl](lmaldona@uc.cl), [http://www.luismaldonado.org/](http://www.luismaldonado.org/) $^\text{a,d,}$[^1]
 - Juan Carlos Castillo $^\text{b,e,1}$
 - Julio Iturra $^\text{a,e,1}$
 - Jorge Atria $^\text{c,e}$
@@ -51,6 +51,12 @@ $^\text{e}$ Centro de Estudios de Conflicto y Cohesión social (COES), Chile.
 `r format(Sys.time(), "%d %b, %Y")`
 
 [^1]: Autores correspondientes. E-mail address: [lmaldona@uc.cl](lmaldona@uc.cl), [juancastillov@uchile.cl](juancastillov@uchile.cl) y [jciturra@uc.cl](jciturra@uc.cl)
+
+<br>
+
+_Disponible en línea [AQUÍ](https://jciturras.github.io/chile-1819/)_
+
+<br>
 
 # Introducción
 
