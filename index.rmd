@@ -1,5 +1,5 @@
 ---
-title: 'Meritocracia y redistribución en Chile: señales de la opinión pública.'
+title: 'Meritocracia y Redistribución en Chile: Señales de la Opinión Pública.'
 # date: "`r format(Sys.time(), "%d %B, %Y")`"
 author:
 - Luis Maldonado $^\text{a,d,}$[^1]
@@ -13,21 +13,30 @@ css: style.css
 output:
   html_document:
     theme: flatly
+    number_sections: true
   pdf_document:
-      keep_tex: no
-      template: null
+    keep_tex: no
+    template: null
+    number_sections: true
 
 geometry: margin=0.78in
 header-includes:
 - \usepackage[spanish,es-tabla,es-nodecimaldot]{babel}
 - \usepackage{caption}
 - \captionsetup[figure]{labelfont={bf},labelformat={default},labelsep=period,name={}}
-linestretch: '1.0'
+linestretch: '1.3'
 link-citations: yes
 linkcolor: blue
 
 
 ---
+
+```{r eval=FALSE, echo=FALSE}
+# Para obtener doble output (html/pdf) correr directamente en consola/terminal:
+rmarkdown::render('index.rmd', output_format = 'all')
+```
+
+
 
 --- 
 
