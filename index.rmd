@@ -1,6 +1,6 @@
 ---
 title: 'Meritocracia y redistribución en Chile: señales de la opinión pública.'
-date: '`r format(Sys.time(), "%d %B, %Y")`'
+# date: "`r format(Sys.time(), "%d %B, %Y")`"
 author:
 - Luis Maldonado $^\text{a,d,}$[^1]
 - Juan Carlos Castillo $^\text{b,e,1}$
@@ -8,11 +8,25 @@ author:
 - Jorge Atria $^\text{c,e}$
 - Francisco Meneses $^\text{b}$
 csl: apa6.csl
-css: "style.css" 
 bibliography: zlibrary.bib
+css: style.css
 output:
-  html_document: 
+  html_document:
     theme: flatly
+  pdf_document:
+      keep_tex: no
+      template: null
+
+geometry: margin=0.78in
+header-includes:
+- \usepackage[spanish,es-tabla,es-nodecimaldot]{babel}
+- \usepackage{caption}
+- \captionsetup[figure]{labelfont={bf},labelformat={default},labelsep=period,name={}}
+linestretch: '1.0'
+link-citations: yes
+linkcolor: blue
+
+
 ---
 
 --- 
@@ -22,6 +36,10 @@ $^\text{b}$ Departamento de Sociología, Universidad de Chile, Chile. <br>
 $^\text{c}$ Escuela de Sociología, Universidad Diego Portales, Santiago, Chile.<br>
 $^\text{d}$ Centro de Investigación para la Gestión Integrada del Riesgo de Desastres (CIGIDEN), Santiago, Chile.<br>
 $^\text{e}$ Centro de Estudios de Conflicto y Cohesión social (COES), Chile.
+
+<br>
+
+`r format(Sys.time(), "%d %b, %Y")`
 
 [^1]: Autores correspondientes. E-mail address: [lmaldona@uc.cl](lmaldona@uc.cl), [juancastillov@uchile.cl](juancastillov@uchile.cl) y [jciturra@uc.cl](jciturra@uc.cl)
 
