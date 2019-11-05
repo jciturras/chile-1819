@@ -2,7 +2,7 @@
 title: 'Meritocracia y Redistribución en Chile: Señales de la Opinión Pública.'
 # date: "`r format(Sys.time(), "%d %B, %Y")`"
 author:
-- Luis Maldonado, [lmaldona@uc.cl](lmaldona@uc.cl), [http://www.luismaldonado.org/](http://www.luismaldonado.org/) $^\text{a,d,}$[^1]
+- Luis Maldonado ([lmaldona@uc.cl](lmaldona@uc.cl)) $^\text{a,d,}$[^1]
 - Juan Carlos Castillo $^\text{b,e,1}$
 - Julio Iturra $^\text{a,e,1}$
 - Jorge Atria $^\text{c,e}$
