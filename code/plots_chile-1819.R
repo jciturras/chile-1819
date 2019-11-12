@@ -87,8 +87,8 @@ g2
 
 # Graficos juntos
 gasto<- grid.arrange(g1,g2,ncol=2,
-                     bottom=textGrob(label = "Fuente: OCDE", 
-                                     just = "left",hjust = -5.4,
+                     bottom=textGrob(label = "Fuente: Elaboración propia a partir de datos OCDE.", 
+                                     just = "left",hjust = -0.87,
                                      gp=gpar(fontsize=10,font=1)))
 
 ggsave(gasto,filename = "images/Figura1.png",device = "png",width = 30,height = 15,dpi = "retina",units = "cm")
@@ -143,7 +143,7 @@ redist01<- ggplot(redisGDP,aes(x=GDP,y=Redistribucion)) +
   scale_x_continuous(breaks = seq(10000,90000,by=10000),limits=c(12000,93000)) + 
   geom_smooth(method="lm", se=FALSE, color="gray50") + 
   labs(y="Reducción del Gini debido a impuestos y transferencias",x="PIB per capita",
-       caption = "Fuente: OCDE") +
+       caption = "Fuente: Elaboración propia a partir de datos OCDE.") +
   theme_bw() +
   theme(legend.position="none") +
   guides(colour=FALSE)
