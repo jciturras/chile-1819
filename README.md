@@ -1,6 +1,10 @@
-# Datos empleados:
+# Meritocracia y redistribución en Chile: Señales de la opinión pública
 
-En siguiente repositorio, están disponibles el código y las referencias para las fuentes utilizadas en el artículo "Meritocracia y redistribución en Chile: señales de la opinión pública"
+Luis Maldonado, Juan-Carlos Castillo, Julio Iturra, Jorge Atria, Francisco Meneses
+
+Este es un reporte que está publicado como [pre-print en SocArxiv](https://osf.io/g4ek8/) y trata sobre  preferencias redistributivas en Chile en contexto internacional y en el tiempo, utilizando datos como ISSP y LAPOP. Una versión de este reporte fue publicado en CIPER en 2019 en https://www.ciperchile.cl/2019/12/06/la-demanda-por-igualdad-y-los-caminos-que-cuentan-con-amplio-respaldo-ciudadano/
+
+---
 
 Las fuentes utilizadas son las siguientes. Incluimos los links en donde se pueden obtener los datos:
 
