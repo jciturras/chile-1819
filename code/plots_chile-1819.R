@@ -24,7 +24,7 @@ issp16 <- sjlabelled::read_stata(path = "data/issp2016gov.dta")
 
 # Figures -----------------------------------------------------------------
 
-# --------------- Figure 1 ------------------------------- 
+# --------------- Figure 1 -------------------------------
 
 # Gini: disposable income, post taxes and transfers, new income definition since 2012
 # Fuente: OECD Income Distribution database (IDD)
@@ -41,7 +41,7 @@ g1=ggplot(data) +
   scale_y_continuous(limits=c(0,100),breaks = seq(0,100,by=10)) +
   scale_x_continuous(breaks = seq(2009,2017,by=2.0))+
   xlab("Año")+
-  ylab("Percentaje") + 
+  ylab("Percentaje") +
   theme_bw()+
   theme(legend.position="none") +
   ggtitle("Coeficiente de Gini") + theme(plot.title = element_text(hjust = 0.5)) +
@@ -57,9 +57,9 @@ g1
 
 # Gasto publico: OECD Social Expenditure Statistics
 # Fuente: Gasto social como porcentage del PIB. OECD Social Expenditure Database (SOCX)
-########################################################	 -  
+########################################################	 -
 
-gasto <- c(10.4,10.8,11.0,10.9) 
+gasto <- c(10.4,10.8,11.0,10.9)
 anio <- c(2010,2015,2016,2017)
 
 oecd <- data.frame(anio,gasto)
@@ -70,10 +70,10 @@ g2=ggplot(oecd) +
   scale_y_continuous(limits=c(0,100),breaks = seq(0,100,by=10)) +
   scale_x_continuous(breaks = seq(2009,2017,by=2.0))+
   xlab("Año")+
-  ylab("Porcentaje") + 
+  ylab("Porcentaje") +
   theme_bw()+
   theme(legend.position="none") +
-  ggtitle("Gasto social") + 
+  ggtitle("Gasto social") +
   theme(plot.title = element_text(hjust = 0.5)) +
   theme(legend.title = element_text(size = 10),
         legend.text = element_text(size = 10),
@@ -87,7 +87,7 @@ g2
 
 # Graficos juntos
 gasto<- grid.arrange(g1,g2,ncol=2,
-                     bottom=textGrob(label = "Fuente: Elaboración propia a partir de datos OCDE.", 
+                     bottom=textGrob(label = "Fuente: Elaboración propia a partir de datos OCDE.",
                                      just = "left",hjust = -0.87,
                                      gp=gpar(fontsize=10,font=1)))
 
@@ -95,7 +95,7 @@ ggsave(gasto,filename = "images/Figura1.png",device = "png",width = 30,height = 
 
 # --------------- Figure 2 ------------------------------
 
-# GDP per head, US $, constant prices, constant PPPs, reference year 2010. Expenditure approach. OECD Statistics. 
+# GDP per head, US $, constant prices, constant PPPs, reference year 2010. Expenditure approach. OECD Statistics.
 
 # Histogram: redistribution & GDP
 
@@ -140,19 +140,19 @@ redist01<- ggplot(redisGDP,aes(x=GDP,y=Redistribucion)) +
   geom_point(aes(color=group,size=Redistribucion2), alpha=0.4) + scale_size(range = c(1, 10)) +
   scale_color_manual(values=c("gray50","red")) +
   geom_text(aes(y=Redistribucion+.8,label=Pais,color=group),size=4, vjust=0) +
-  scale_x_continuous(breaks = seq(10000,90000,by=10000),limits=c(12000,93000)) + 
-  geom_smooth(method="lm", se=FALSE, color="gray50") + 
+  scale_x_continuous(breaks = seq(10000,90000,by=10000),limits=c(12000,93000)) +
+  geom_smooth(method="lm", se=FALSE, color="gray50") +
   labs(y="Reducción del Gini debido a impuestos y transferencias",x="PIB per capita",
        caption = "Fuente: Elaboración propia a partir de datos OCDE.") +
   theme_bw() +
   theme(legend.position="none") +
   guides(colour=FALSE)
-  
+
 redist01
 
 ggsave(redist01,filename = "images/Figura2.png",device = "png",width = 30,height = 15,dpi = "retina",units = "cm")
 
-# --------------- Figure 3 ---------------------------------- 
+# --------------- Figure 3 ----------------------------------
 
 datam1 <- elsocl %>% select(tipo_atricion,starts_with("c18_09"),starts_with("ponderador01")) %>% filter(tipo_atricion==1) %>% select(-tipo_atricion) %>% na.omit()
 datam2 <- elsocl %>% select(tipo_atricion,starts_with("c18_10"),starts_with("ponderador01")) %>% filter(tipo_atricion==1) %>% select(-tipo_atricion) %>% na.omit()
@@ -218,7 +218,7 @@ merit<- rbind(
 
 pef1 <- ggplot(data = data.frame(merit=ef1, var="esfuerzo",year=c(2016,2017,2018)),
                mapping = aes(x = factor(year),y = merit, label=paste(round(merit*100,2),"%"))) +
-  geom_bar(stat = "identity") + 
+  geom_bar(stat = "identity") +
   geom_label()+
   labs(title = "En Chile las personas son recompensadas por sus esfuerzos.")+
   xlab(label = NULL)+
@@ -250,13 +250,13 @@ ptdu1 <- ggplot(data = data.frame(merit=tdur1,var="tduro"  ,year=c(2016,2017,201
 ptdu1
 
 barplot1<- grid.arrange(ptdu1,pef1, nrow = 1,
-                        bottom=textGrob(label = "Estudio Social Longitudinal de Chile (n=2094). Análisis incluyen ponderadores.", 
+                        bottom=textGrob(label = "Estudio Social Longitudinal de Chile (n=2094). Análisis incluyen ponderadores.",
                                         just = "left",hjust = -0.39,
                                         gp=gpar(fontsize=9,font=1)))
 
 ggsave(barplot1,filename = "images/Figura3.png",device = "png",width = 30,height = 15,dpi = "retina",units = "cm")
 
-# --------------- Figura 4 ---------------------------------- 
+# --------------- Figura 4 ----------------------------------
 
 # Preferencias redistributivas: evolucion en el tiempo
 ##########################################################-
@@ -277,7 +277,7 @@ g3=ggplot(wvs) +
   scale_y_continuous(limits=c(0,100),breaks = seq(0,100,by=10)) +
   scale_x_continuous(breaks = seq(1990,2016,by=4))+
   xlab("Año")+
-  ylab("Porcentaje") + 
+  ylab("Porcentaje") +
   theme_bw()+
   theme(legend.position="none") +
   ggtitle("Igualitarismo: 1990-2012") + theme(plot.title = element_text(hjust = 0.5)) +
@@ -286,21 +286,21 @@ g3=ggplot(wvs) +
         legend.position = "bottom",
         axis.text=element_text(size=12),
         axis.title.y = element_text(size=14, face="bold"),
-        plot.title=element_text(hjust=0.5,size = 11,face = "plain")) + 
+        plot.title=element_text(hjust=0.5,size = 11,face = "plain")) +
   guides(colour=F)+
   labs(caption = "Fuente:  World Value Survey 1990/2019.")
 g3
 
 # ISSP junio 2019: 4B
-# Es responsabilidad del gobierno reducir las diferencias de ingreso entre las personas 
+# Es responsabilidad del gobierno reducir las diferencias de ingreso entre las personas
 # con altos ingresos y aquellas con bajos ingresos
 
 bar <- data.frame(dose=c("De acuerdo","Ni de acuerdo ni en desacuerdo","En desacuerdo"),
-                  per=c(73.7,17.0,9.3)/100) 
+                  per=c(73.7,17.0,9.3)/100)
 
 
 g4=ggplot(data=bar,aes(x=reorder(dose,-per),y=per,label=paste(round(per*100,2),"%"))) +
-  geom_bar(stat="identity") + 
+  geom_bar(stat="identity") +
   # geom_text(aes(label=per), vjust=1.6, color="white", size=5.5)+
   geom_label()+
   # scale_y_continuous(limits=c(0,100),breaks = seq(0,100,by=10)) +
@@ -325,7 +325,7 @@ prefAL
 
 ggsave(prefAL,filename = "images/Figura4.png",device = "png",width = 30,height = 15,dpi = "retina",units = "cm")
 
-# --------------- Figura 5 ----------------- 
+# --------------- Figura 5 -----------------
 my_data <- data.frame(
   Country = c("Australia","Belgica","Chile","Croacia","Republica checa","Dinamarca","Finlandia",
               "Francia","Georgia","Alemania","Hungria","Islandia","Israel","Japon","Corea del sur",
@@ -340,7 +340,7 @@ fill1 <- c("gray85","gray85","gray85","gray85","gray85","gray85","gray85","gray8
            "gray85","gray85","gray85","gray85","gray85","gray85","gray85","gray85","gray85","gray85","gray85","gray85","gray85",
            "gray85","gray85","gray85","red","gray85")
 
-g5=ggplot(my_data, aes(x=reorder(Country,Redistribution),y=Redistribution)) + 
+g5=ggplot(my_data, aes(x=reorder(Country,Redistribution),y=Redistribution)) +
   geom_bar(stat="identity", position="dodge",fill=fill1,colour="black", show.legend=FALSE) +
   geom_text(aes(label=paste(Redistribution*100)),hjust=-0.2,size=3.5) +
   geom_hline(yintercept =0.455,size=.5,colour="red",linetype="solid") +
@@ -349,13 +349,13 @@ g5=ggplot(my_data, aes(x=reorder(Country,Redistribution),y=Redistribution)) +
   coord_flip() +
   theme_bw() +
   annotate("text", x="Republica checa", y=0.545, label="Promedio:45,5",size=4,colour="red") +
-  ggtitle("¿Es responsabilidad del gobierno reducir las diferencias de ingreso entre ricos y pobres?") + theme(plot.title = element_text(hjust = 0.5)) +
-  theme(legend.title = element_text(size = 10),
+  ggtitle("¿Es responsabilidad del gobierno \n reducir las diferencias de ingreso \n entre ricos y pobres?") + theme(plot.title = element_text(hjust = 0.5)) +
+  theme(legend.title = element_text(size = 14,face="bold"),
         legend.text = element_text(size = 10),
         legend.position = "bottom",
         axis.text=element_text(size=12),
         axis.title.y = element_text(size=12, face="bold"),
-        plot.title=element_text(hjust=0,size = 12,face = "italic"))+
+        plot.title=element_text(hjust=0,size = 20,face = "bold"))+
   labs(caption = "Fuente: ISSP 2016 - Role of Goverment")
 g5
 
@@ -376,7 +376,7 @@ fill2 <- c("gray85","gray85","gray85","gray85","gray85","gray85","gray85","gray8
            "gray85","gray85","gray85","gray85","gray85","gray85","gray85","gray85","red",
            "gray85")
 
-g6=ggplot(my_data1, aes(x=reorder(Country,Redistribution),y=Redistribution)) + 
+g6=ggplot(my_data1, aes(x=reorder(Country,Redistribution),y=Redistribution)) +
   geom_bar(stat="identity", position="dodge",fill=fill2,colour="black", show.legend=FALSE) +
   geom_text(aes(label=paste(Redistribution*100)),hjust=-0.2,size=3.5) +
   geom_hline(yintercept =0.5455,size=.5,colour="red",linetype="solid") +
@@ -395,12 +395,12 @@ g6=ggplot(my_data1, aes(x=reorder(Country,Redistribution),y=Redistribution)) +
   labs(caption = "Fuente:  Latin American Public Opinion Project (2016/2017)")
 g6
 
-pref1 <- grid.arrange(g5,g6,ncol=2)	   
+pref1 <- grid.arrange(g5,g6,ncol=2)
 
 ggsave(pref1,filename = "images/Figura5.png",device = "png",width = 50,height = 25,dpi = "retina",units = "cm")
 
 
-# --------------- Figura 6 ----------------- 
+# --------------- Figura 6 -----------------
 
 cl16 <-issp16 %>% filter(country==152) %>% select(gsalud=v14,geduc=v16,gpension=v18,gunemp=v19,WEIGHT) %>% na.omit()
 
@@ -441,7 +441,7 @@ gov1<- plot_likert(cl16[,c("gsalud","geduc","gpension","gunemp")],cat.neutral = 
                    axis.labels = c("Salud","Educación","Mejores pensiones","Beneficio desempleo"),
                    show.n = F,reverse.scale = FALSE,weight.by = cl16$WEIGHT) +
   labs(title ="Areas de gasto del gobierno. Dígame si a Ud. le gustaría que se gastara más o menos en cada una de ellas.",
-       subtitle = "'Mucho más', podría ser necesario aumentar los impuestos.", 
+       subtitle = "'Mucho más', podría ser necesario aumentar los impuestos.",
        caption = "International Social Survey Programme - Role of Goverment 2016 (n=1349). Análisis incluyen ponderadores.")+ theme_classic()+
   theme(axis.text=element_text(size=12, face="bold"),
         axis.title=element_text(size=14,face="bold"),
@@ -454,14 +454,14 @@ gov1
 ggsave(gov1,filename = "images/Figura6.png",device = "png",width = 30,height = 15,dpi = "retina",units = "cm")
 
 
-# --------------- Figura 7 ----------------- 
+# --------------- Figura 7 -----------------
 
 fuente2 <- "International Social Survey Programme - CEP Mayo 2019"
 cl19 <- rename(cl19,rgov=M2_P4_2)
 cl19$rgov <- car::recode(cl19$rgov, recode="1:2=1;4:5=2;3=3;8:9=NA")
 
 
-col19 <- cl19 %>% select(M2_P20_1:M2_P20_4,M2_P21_1,M2_P23,FACTOR) %>% rename(sind=M2_P20_1,repres=M2_P20_2,masalary=M2_P20_3,gersalary=M2_P20_4) 
+col19 <- cl19 %>% select(M2_P20_1:M2_P20_4,M2_P21_1,M2_P23,FACTOR) %>% rename(sind=M2_P20_1,repres=M2_P20_2,masalary=M2_P20_3,gersalary=M2_P20_4)
 col19[col19==8] <- NA
 col19[col19==9] <- NA
 
@@ -492,7 +492,7 @@ state1
 
 ggsave(state1,filename = "images/Figura7.png",device = "png",width = 30,height = 15,dpi = "retina",units = "cm")
 
-# --------------- Figura 8 ----------------- 
+# --------------- Figura 8 -----------------
 
 col19$M2_P21_1 <- car::recode(col19$M2_P21_1, recode="1:2=1;4:5=2;3=3;8:9=NA",as.numeric = TRUE)
 cl16b <- col19 %>%  rename(pppublicas=M2_P21_1)
@@ -538,13 +538,13 @@ ppolicy2<- ggplot(data =as.data.frame(prop.table(wtd.table(cl16c$ppubmeb,weights
 ppolicy2
 
 pol01<- grid.arrange(ppolicy1,ppolicy2, nrow = 1,
-                     bottom=textGrob(label = "International Social Survey Programme - CEP Mayo 2019 (N=1244). Análisis incluyen ponderadores.", 
+                     bottom=textGrob(label = "International Social Survey Programme - CEP Mayo 2019 (N=1244). Análisis incluyen ponderadores.",
                                      just = "left",hjust = -0.08,gp=gpar(fontsize=9,font=1)))
 
 ggsave(pol01,filename = "images/Figura8.png",device = "png",width = 30,height = 15,dpi = "retina",units = "cm")
 
 
-# --------------- Figura 9 ----------------- 
+# --------------- Figura 9 -----------------
 
 union2<- plot_likert(col19[,c("sind","repres")],cat.neutral = 3,show.n = FALSE,values="sum.outside",
                      axis.labels = titles2,
@@ -559,4 +559,3 @@ union2<- plot_likert(col19[,c("sind","repres")],cat.neutral = 3,show.n = FALSE,v
 union2
 
 ggsave(union2,filename = "images/Figura9.png",device = "png",width = 30,height = 15,dpi = "retina",units = "cm")
-

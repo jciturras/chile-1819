@@ -7,6 +7,8 @@ author:
 - Julio Iturra $^\text{a,e,1}$
 - Jorge Atria $^\text{c,e}$
 - Francisco Meneses $^\text{b}$
+
+date: "08 Nov 2019"
 csl: apa6.csl
 bibliography: zlibrary.bib
 css: style.css
@@ -66,26 +68,22 @@ capFig = function(x){
 ```
 
 
---- 
+---
 
 $^\text{a}$ Instituto de Sociología, Pontificia Universidad Católica de Chile, Chile. <br> \newline
 $^\text{b}$ Departamento de Sociología, Universidad de Chile, Chile. <br> \newline
 $^\text{c}$ Escuela de Sociología, Universidad Diego Portales, Santiago, Chile.<br> \newline
 $^\text{d}$ Centro de Investigación para la Gestión Integrada del Riesgo de Desastres (CIGIDEN), Santiago, Chile. <br> \newline
-$^\text{e}$ Centro de Estudios de Conflicto y Cohesión social (COES), Chile. 
+$^\text{e}$ Centro de Estudios de Conflicto y Cohesión social (COES), Chile.
 
-<br> 
-`r format(Sys.time(), "%d %b, %Y")`
+<br>
 
-**Cómo citar:**
-
-> Maldonado, L., Castillo, J. C., Iturra, J. C., Atria, J., & Meneses, F. (2019, November 3). Meritocracia y redistribución en Chile: señales de la opinión pública. [https://doi.org/10.17605/OSF.IO/G4EK8](https://doi.org/10.17605/OSF.IO/G4EK8)
 
 [^1]: Autores correspondientes. E-mail address: [lmaldona@uc.cl](lmaldona@uc.cl), [juancastillov@uchile.cl](juancastillov@uchile.cl) y [jciturra@uc.cl](jciturra@uc.cl)
 
 <br>
 
-_Disponible en línea [AQUÍ](https://jciturras.github.io/chile-1819/)_
+_Disponible en línea en [https://github.com/justicia-distributiva/merit-redist-chile2019](https://github.com/justicia-distributiva/merit-redist-chile2019)_
 
 <br>
 
@@ -204,7 +202,7 @@ Material para la replicación de los análisis realizados para la presente inves
 
 ### Declaraciones de los autores
 
-Luis Maldonado y Julio Iturra aportaron equitativamente en el proceso de redacción y análisis de datos. Juan Carlos Castillo y Jorge Atria aportaron con la edición y escritura del manustrito. Francisco Meneses aportó con ediciones generales. 
+Luis Maldonado y Julio Iturra aportaron equitativamente en el proceso de redacción y análisis de datos. Juan Carlos Castillo y Jorge Atria aportaron con la edición y escritura del manustrito. Francisco Meneses aportó con ediciones generales.
 
 ### Financiamiento
 
